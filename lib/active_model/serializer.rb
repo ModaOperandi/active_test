@@ -174,8 +174,9 @@ module ActiveModel
       puts "\n\ActiveModelSerializers::Serializer:174 REQUEST...#{DateTime.now.strftime('%Q')}\n\n"
       relationships = resource_relationships(adapter_options, options, adapter_instance)
       puts "\n\ActiveModelSerializers::Serializer:176 REQUEST...#{DateTime.now.strftime('%Q')}\n\n"
-      resource.merge(relationships)
+      r = resource.merge(relationships)
       puts "\n\ActiveModelSerializers::Serializer:178 REQUEST...#{DateTime.now.strftime('%Q')}\n\n"
+      r
     end
     alias to_hash serializable_hash
     alias to_h serializable_hash

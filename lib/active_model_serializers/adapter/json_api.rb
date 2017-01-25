@@ -66,8 +66,9 @@ module ActiveModelSerializers
           puts "\n\ActiveModelSerializers::Adapter::JsonApi:66 REQUEST...#{DateTime.now.strftime('%Q')}\n\n"
         end
         puts "\n\ActiveModelSerializers::Adapter::JsonApi:68 REQUEST...#{DateTime.now.strftime('%Q')}\n\n"
-        self.class.transform_key_casing!(document, instance_options)
+        s = self.class.transform_key_casing!(document, instance_options)
         puts "\n\ActiveModelSerializers::Adapter::JsonApi:70 REQUEST...#{DateTime.now.strftime('%Q')}\n\n"
+        s
       end
 
       def fragment_cache(cached_hash, non_cached_hash)

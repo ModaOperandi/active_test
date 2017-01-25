@@ -57,8 +57,9 @@ module ActiveModelSerializers
 
       def as_json(options = nil)
         puts "\n\ActiveModelSerializers::Adapter::Base:59 REQUEST...#{DateTime.now.strftime('%Q')}\n\n"
-        serializable_hash(options)
+        s = serializable_hash(options)
         puts "\n\ActiveModelSerializers::Adapter::Base:61:16 REQUEST...#{DateTime.now.strftime('%Q')}\n\n"
+        s
       end
 
       def cache_key
